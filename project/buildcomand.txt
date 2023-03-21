@@ -1,1 +1,0 @@
-mvn -Dspring-cloud.version=2022.0.0 -Dspring-boot.version=3.0.1 -Dmaven-compiler-plugin.version=3.8.1 -Dspring.version=6.0.1 package
