@@ -11,10 +11,14 @@ public class StackoverflowLinkParser extends AbstractParser {
                 int id = Integer.parseInt(arr[3]);
                 return new StackoverflowLinkParserAnswer(id);
             } catch (NumberFormatException e) {
-                return getNext() != null ? getNext().parse(link) : null;
+                return parseInNext(link);
             }
         } else {
-            return getNext() != null ? getNext().parse(link) : null;
+            return parseInNext(link);
         }
+    }
+
+    private LinkParserAnswer parseInNext(String link) {
+        return getNext() != null ? getNext().parse(link) : null;
     }
 }
