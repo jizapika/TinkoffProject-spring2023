@@ -1,2 +1,4 @@
 ru.tinkoff.edu.java.scrapper.ScrapperApplication=org.springframework.stereotype.Component,org.springframework.boot.SpringBootConfiguration
+ru.tinkoff.edu.java.scrapper.ScrapperController=org.springframework.stereotype.Component
 ru.tinkoff.edu.java.scrapper.configuration.ApplicationConfig=org.springframework.boot.context.properties.ConfigurationProperties
+ru.tinkoff.edu.java.scrapper.handlers.ScrapperExceptionHandler=org.springframework.stereotype.Component
