@@ -1,8 +1,0 @@
-parsers\AbstractParser.class
-ParsersChainBuilder.class
-answers\LinkParserAnswer.class
-answers\StackoverflowLinkParserAnswer.class
-parsers\GithubLinkParser.class
-parsers\StackoverflowLinkParser.class
-parsers\LinkParser.class
-answers\GithubLinkParserAnswer.class

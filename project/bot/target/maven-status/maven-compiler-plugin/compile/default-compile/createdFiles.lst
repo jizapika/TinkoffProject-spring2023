@@ -1,6 +1,0 @@
-ru\tinkoff\edu\java\bot\configuration\ApplicationConfig.class
-META-INF\spring.components
-ru\tinkoff\edu\java\bot\BotApplication.class
-ru\tinkoff\edu\java\bot\handlers\BotHandler.class
-META-INF\spring-configuration-metadata.json
-ru\tinkoff\edu\java\bot\handlers\BotExceptionHandler.class
