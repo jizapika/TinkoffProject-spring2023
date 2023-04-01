@@ -1,11 +1,11 @@
-package ru.tinkoff.edu.java.scrapper.handlers;
+package ru.tinkoff.edu.java.scrapper.controllers.handlers;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
 import org.springframework.web.client.HttpClientErrorException;
-import ru.tinkoff.edu.java.scrapper.dto.ApiErrorResponse;
+import ru.tinkoff.edu.java.scrapper.dto.responses.ApiErrorResponse;
 
 import java.util.List;
 
