@@ -8,7 +8,7 @@ public class StackoverflowLinkParser extends AbstractParser {
         String[] arr = link.split("/");
         if (arr.length == 4 && (link.startsWith("https://github.com/") || link.startsWith("https://www.github.com/"))) {
             try {
-                int id = Integer.parseInt(arr[3]);
+                long id = Long.parseLong(arr[3]);
                 return new StackoverflowLinkParserAnswer(id);
             } catch (NumberFormatException e) {
                 return parseInNext(link);

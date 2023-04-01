@@ -1,17 +1,23 @@
 package ru.tinkoff.edu.java.scrapper.clients;
 
+import lombok.RequiredArgsConstructor;
 import org.springframework.web.reactive.function.client.WebClient;
+import reactor.core.publisher.Mono;
 import ru.tinkoff.edu.java.scrapper.clients.responses.StackOverflowResponse;
 
+import java.net.URI;
+
+@RequiredArgsConstructor
 public class StackOverflowClient {
-    WebClient webClient;
+    private final WebClient stackoverflowClient;
 
-    public StackOverflowClient(WebClient webClient) {
-        this.webClient = webClient;
-    }
-
-    public StackOverflowResponse getQuestions() {
-        Long id = 28275397L;
-        webClient.get().uri(baseUrl + "/questions/{id}");
+    public StackOverflowResponse fetchQuestion(Long id) {
+        Mono<StackOverflowResponse> stackOverflowResponseMono = stackoverflowClient
+                .get()
+                .uri(baseUrl -> URI.create(baseUrl.build() + "questions/" + id + "?site=stackoverflow"))
+                .retrieve()
+                .bodyToMono(StackOverflowResponse.class);
+        return stackOverflowResponseMono
+                .block();
     }
 }
