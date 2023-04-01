@@ -14,8 +14,8 @@ public class ScrapperExceptionHandler {
 
     private static final String BAD_REQUEST_DESCRIPTION = "Bad request";
     private static final String BAD_REQUEST_CODE = "400";
-    public static final String NOT_FOUND_DESCRIPTION = "Not found";
-    public static final String NOT_FOUND_CODE = "404";
+    private static final String NOT_FOUND_DESCRIPTION = "Not found";
+    private static final String NOT_FOUND_CODE = "404";
 
     @ExceptionHandler
     public ResponseEntity<ApiErrorResponse> badRequestHandle(HttpClientErrorException.BadRequest exception) {
