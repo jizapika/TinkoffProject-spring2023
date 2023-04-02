@@ -1,4 +1,4 @@
 package answers;
 
-public record StackoverflowLinkParserAnswer(Integer id) implements LinkParserAnswer {
+public record StackoverflowLinkParserAnswer(Long id) implements LinkParserAnswer {
 }
