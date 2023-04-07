@@ -1,9 +1,9 @@
-package ru.tinkoff.edu.java.scrapper.clients.forlinks;
+package ru.tinkoff.edu.java.scrapper.client;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Mono;
-import ru.tinkoff.edu.java.scrapper.clients.forlinks.responses.GithubResponse;
+import ru.tinkoff.edu.java.scrapper.client.responses.GithubResponse;
 
 import java.net.URI;
 

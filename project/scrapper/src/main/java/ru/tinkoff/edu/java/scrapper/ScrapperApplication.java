@@ -4,8 +4,8 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.scheduling.annotation.EnableScheduling;
-import ru.tinkoff.edu.java.scrapper.clients.forlinks.GithubClient;
-import ru.tinkoff.edu.java.scrapper.clients.forlinks.StackOverflowClient;
+import ru.tinkoff.edu.java.scrapper.client.GithubClient;
+import ru.tinkoff.edu.java.scrapper.client.StackOverflowClient;
 import ru.tinkoff.edu.java.scrapper.configuration.ApplicationConfig;
 
 @SpringBootApplication

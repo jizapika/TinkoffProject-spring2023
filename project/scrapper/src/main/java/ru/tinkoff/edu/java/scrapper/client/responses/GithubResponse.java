@@ -1,4 +1,4 @@
-package ru.tinkoff.edu.java.scrapper.clients.forlinks.responses;
+package ru.tinkoff.edu.java.scrapper.client.responses;
 
 import java.time.OffsetDateTime;
 
