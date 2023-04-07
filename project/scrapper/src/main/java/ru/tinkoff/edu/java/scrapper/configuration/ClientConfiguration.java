@@ -3,8 +3,8 @@ package ru.tinkoff.edu.java.scrapper.configuration;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.reactive.function.client.WebClient;
-import ru.tinkoff.edu.java.scrapper.clients.GithubClient;
-import ru.tinkoff.edu.java.scrapper.clients.StackOverflowClient;
+import ru.tinkoff.edu.java.scrapper.clients.forlinks.GithubClient;
+import ru.tinkoff.edu.java.scrapper.clients.forlinks.StackOverflowClient;
 
 @Configuration
 public class ClientConfiguration {
