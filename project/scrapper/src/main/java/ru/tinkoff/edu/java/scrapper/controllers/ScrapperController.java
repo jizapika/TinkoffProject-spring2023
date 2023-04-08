@@ -5,6 +5,8 @@ import org.springframework.web.bind.annotation.*;
 import ru.tinkoff.edu.java.scrapper.controllers.handlers.ScrapperHandler;
 import ru.tinkoff.edu.java.scrapper.dto.requests.AddLinkRequest;
 import ru.tinkoff.edu.java.scrapper.dto.requests.RemoveLinkRequest;
+import ru.tinkoff.edu.java.scrapper.dto.responses.LinkResponse;
+import ru.tinkoff.edu.java.scrapper.dto.responses.ListLinksResponse;
 
 @RestController
 @ScrapperHandler
@@ -21,17 +23,17 @@ public class ScrapperController {
     }
 
     @GetMapping("/links")
-    public ResponseEntity<?> getAllLinks(@RequestParam Long id) {
+    public ResponseEntity<ListLinksResponse> getAllLinks(@RequestParam Long id) {
         return ResponseEntity.ok().build();
     }
 
     @PostMapping("/links")
-    public ResponseEntity<?> addLink(@RequestBody AddLinkRequest request) {
+    public ResponseEntity<LinkResponse> addLink(@RequestBody AddLinkRequest request) {
         return ResponseEntity.ok().build();
     }
 
     @DeleteMapping("/links")
-    public ResponseEntity<?> removeLink(@RequestBody RemoveLinkRequest request) {
+    public ResponseEntity<LinkResponse> removeLink(@RequestBody RemoveLinkRequest request) {
         return ResponseEntity.ok().build();
     }
 }
