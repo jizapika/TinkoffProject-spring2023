@@ -2,10 +2,9 @@ package ru.tinkoff.edu.java.bot.service.command;
 
 import com.pengrad.telegrambot.model.Message;
 import com.pengrad.telegrambot.request.SendMessage;
-import ru.tinkoff.edu.java.bot.service.repo.AbstractTrackedLinksRepo;
-import ru.tinkoff.edu.java.bot.service.repo.TrackedLinksRepo;
+import ru.tinkoff.edu.java.bot.repo.AbstractTrackedLinksRepo;
+import ru.tinkoff.edu.java.bot.repo.TrackedLinksRepo;
 
-import java.util.List;
 import java.util.Optional;
 
 public class UntrackCommand implements Command {

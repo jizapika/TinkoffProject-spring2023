@@ -14,11 +14,14 @@ import java.util.List;
 
 @Component
 public class LinkTrackerTelegramBot implements LinkTrackerBot {
-    @Autowired
     private final TelegramBot telegramBot;
+    private final LinkTrackerUserMessageProcessor processor;
 
-    public LinkTrackerTelegramBot(String token) {
+    public LinkTrackerTelegramBot(
+            @Autowired String token,
+            @Autowired LinkTrackerUserMessageProcessor processor) {
         this.telegramBot = new TelegramBot(token);
+        this.processor = processor;
     }
 
     @Override
@@ -28,7 +31,6 @@ public class LinkTrackerTelegramBot implements LinkTrackerBot {
 
     @Override
     public int process(List<Update> updates) {
-        LinkTrackerUserMessageProcessor processor = new LinkTrackerUserMessageProcessor();
         updates.forEach(update -> execute(processor.process(update.message())));
         return UpdatesListener.CONFIRMED_UPDATES_ALL;
     }

@@ -1,4 +1,4 @@
-package ru.tinkoff.edu.java.bot.service.repo;
+package ru.tinkoff.edu.java.bot.repo;
 
 import java.util.List;
 import java.util.Optional;

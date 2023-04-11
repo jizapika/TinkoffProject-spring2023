@@ -2,10 +2,8 @@ package ru.tinkoff.edu.java.bot.service.command;
 
 import com.pengrad.telegrambot.model.Message;
 import com.pengrad.telegrambot.request.SendMessage;
-import ru.tinkoff.edu.java.bot.service.repo.AbstractTrackedLinksRepo;
-import ru.tinkoff.edu.java.bot.service.repo.TrackedLinksRepo;
-
-import java.util.List;
+import ru.tinkoff.edu.java.bot.repo.AbstractTrackedLinksRepo;
+import ru.tinkoff.edu.java.bot.repo.TrackedLinksRepo;
 
 public class TrackCommand implements Command {
     private static final String COMMAND = "/track";

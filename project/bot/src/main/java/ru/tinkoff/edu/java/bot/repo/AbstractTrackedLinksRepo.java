@@ -1,7 +1,10 @@
-package ru.tinkoff.edu.java.bot.service.repo;
+package ru.tinkoff.edu.java.bot.repo;
+
+import org.springframework.stereotype.Component;
 
 import java.util.*;
 
+@Component
 public class AbstractTrackedLinksRepo implements TrackedLinksRepo {
     private static Map<Long, List<String>> data = new HashMap<>();
 
