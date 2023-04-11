@@ -1,7 +1,8 @@
-import parsers.AbstractParser;
-import parsers.GithubLinkParser;
-import parsers.LinkParser;
-import parsers.StackoverflowLinkParser;
+package ru.tinkoff.edu.java.linkparser;
+
+import ru.tinkoff.edu.java.linkparser.parsers.AbstractParser;
+import ru.tinkoff.edu.java.linkparser.parsers.GithubLinkParser;
+import ru.tinkoff.edu.java.linkparser.parsers.StackoverflowLinkParser;
 
 public class ParsersChainBuilder {
     private AbstractParser first;
