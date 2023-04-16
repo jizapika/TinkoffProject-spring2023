@@ -7,5 +7,6 @@
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd
         http://www.liquibase.org/xml/ns/dbchangelog-ext https://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
 
-    <include file="01-schema-1.sql"/>
+    <include file="scripts/2023-04-16-CRS-1_create_chats_table.sql"/>
+    <include file="scripts/2023-04-16-CRS-2_create_links_table.sql"/>
 </databaseChangeLog>
