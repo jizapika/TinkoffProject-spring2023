@@ -8,7 +8,10 @@ import java.time.Duration;
 
 @Validated
 @ConfigurationProperties(prefix = "app", ignoreUnknownFields = false)
-public record ApplicationConfig(@NotNull String test, @NotNull Scheduler scheduler) {
+public record ApplicationConfig(@NotNull String test, @NotNull Scheduler scheduler, Client client) {
     public record Scheduler(Duration interval) {
+    }
+
+    public record Client(String baseUrlForGithub, String baseUrlForStackoverflow) {
     }
 }
