@@ -1,4 +1,4 @@
-package ru.tinkoff.edu.java.bot.client.requests;
+package ru.tinkoff.edu.java.bot.dto.client.requests;
 
 import java.net.URI;
 

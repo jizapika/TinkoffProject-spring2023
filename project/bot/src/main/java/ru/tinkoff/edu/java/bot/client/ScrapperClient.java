@@ -1,12 +1,11 @@
 package ru.tinkoff.edu.java.bot.client;
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.reactive.function.client.WebClient;
-import ru.tinkoff.edu.java.bot.client.responses.LinkResponse;
-import ru.tinkoff.edu.java.bot.client.responses.ListLinksResponse;
-import ru.tinkoff.edu.java.bot.client.requests.AddLinkRequest;
-import ru.tinkoff.edu.java.bot.client.requests.RemoveLinkRequest;
+import ru.tinkoff.edu.java.bot.dto.client.responses.LinkResponse;
+import ru.tinkoff.edu.java.bot.dto.client.responses.ListLinksResponse;
+import ru.tinkoff.edu.java.bot.dto.client.requests.AddLinkRequest;
+import ru.tinkoff.edu.java.bot.dto.client.requests.RemoveLinkRequest;
 
 import java.net.URI;
 

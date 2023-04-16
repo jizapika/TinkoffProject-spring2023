@@ -2,6 +2,8 @@ package ru.tinkoff.edu.java.linkparser.parsers;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
+import org.junit.jupiter.params.provider.ValueSource;
 import ru.tinkoff.edu.java.linkparser.ParsersChainBuilder;
 import ru.tinkoff.edu.java.linkparser.answers.GithubLinkParserAnswer;
 import ru.tinkoff.edu.java.linkparser.answers.LinkParserAnswer;
@@ -17,15 +19,16 @@ class AbstractParserTest {
         this.parser = ParsersChainBuilder.createDefaultChain();
     }
 
-    @Test
-    void parse_receivedUncorrectedLinks_returnNull() {
+    @ParameterizedTest
+    @ValueSource(strings = {
+            "https://stackoverfow.com/questions/40796756/assertall-vs-multiple-assertions-in-junit5",
+            "https://stackoverflow.com/questions/40796756/assertall-vs-multiple-assertions-in-junit5//"
+    })
+    void parse_receivedUncorrectedLinks_returnNull(String notCorrectLink) {
         // when
-        LinkParserAnswer withoutLetter = parser.parse("https://stackoverfow.com/questions/40796756/assertall-vs-multiple-assertions-in-junit5");
-        LinkParserAnswer withAnExtraSlash = parser.parse("https://stackoverflow.com/questions/40796756/assertall-vs-multiple-assertions-in-junit5//");
+        LinkParserAnswer withoutLetter = parser.parse(notCorrectLink);
         // then
-        Assertions.assertAll(
-                () -> assertNull(withoutLetter),
-                () -> assertNull(withAnExtraSlash));
+        Assertions.assertNull(withoutLetter);
     }
 
     @Test

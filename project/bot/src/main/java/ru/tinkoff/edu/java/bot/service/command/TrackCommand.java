@@ -2,7 +2,7 @@ package ru.tinkoff.edu.java.bot.service.command;
 
 import com.pengrad.telegrambot.model.Message;
 import com.pengrad.telegrambot.request.SendMessage;
-import ru.tinkoff.edu.java.bot.repo.AbstractTrackedLinksRepo;
+import ru.tinkoff.edu.java.bot.repo.InMemoryTrackedLinksRepo;
 import ru.tinkoff.edu.java.bot.repo.TrackedLinksRepo;
 
 public class TrackCommand implements Command {
@@ -28,7 +28,7 @@ public class TrackCommand implements Command {
 
     @Override
     public SendMessage handle(Message message) {
-        TrackedLinksRepo repo = new AbstractTrackedLinksRepo();
+        TrackedLinksRepo repo = new InMemoryTrackedLinksRepo();
         Long chatId = message.chat().id();
         String link = message.text().trim().substring(COMMAND.length());
         repo.addByChatIdAndLink(chatId, link);

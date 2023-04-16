@@ -5,8 +5,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.ApplicationContext;
 import ru.tinkoff.edu.java.bot.client.ScrapperClient;
-import ru.tinkoff.edu.java.bot.client.requests.AddLinkRequest;
-import ru.tinkoff.edu.java.bot.client.requests.RemoveLinkRequest;
+import ru.tinkoff.edu.java.bot.dto.client.requests.AddLinkRequest;
+import ru.tinkoff.edu.java.bot.dto.client.requests.RemoveLinkRequest;
 import ru.tinkoff.edu.java.bot.configuration.ApplicationConfig;
 import ru.tinkoff.edu.java.bot.service.bot.LinkTrackerTelegramBot;
 
