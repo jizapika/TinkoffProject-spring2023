@@ -9,4 +9,7 @@
 
     <include file="scripts/2023-04-16-CRS-1_create_chats_table.sql"/>
     <include file="scripts/2023-04-16-CRS-2_create_links_table.sql"/>
+    <include file="scripts/2023-06-16-CRS-1_rename_chats_table.sql"/>
+    <include file="scripts/2023-06-16-CRS-2_rename_links_table.sql"/>
+    <include file="scripts/2023-06-16-CRS-3_refactor_link_table_id.sql"/>
 </databaseChangeLog>

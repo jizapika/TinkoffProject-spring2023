@@ -1,3 +1,5 @@
+package ru.tinkoff.edu.java.scrapper;
+
 import liquibase.Contexts;
 import liquibase.LabelExpression;
 import liquibase.Liquibase;
@@ -7,9 +9,8 @@ import liquibase.database.jvm.JdbcConnection;
 import liquibase.exception.LiquibaseException;
 import liquibase.resource.DirectoryResourceAccessor;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.params.provider.ValueSource;
+import ru.tinkoff.edu.java.scrapper.IntegrationEnvironment;
 
-import java.io.File;
 import java.io.FileNotFoundException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -18,9 +19,9 @@ import java.sql.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class IntegrationEnvironmentTest extends IntegrationEnvironment {
-    private static final String INSERT = "INSERT INTO chats(id, last_command) VALUES (1, '/start')";
+    private static final String INSERT = "INSERT INTO chat(id, last_command) VALUES (1, '/start')";
     private static final String LAST_COMMAND = "/start";
-    private static final String SELECT = "SELECT last_command FROM chats WHERE id = 1";
+    private static final String SELECT = "SELECT last_command FROM chat WHERE id = 1";
     private static final String CHANGE_LOG_FILE = "master.xml";
     private static final String MIGRATIONS_DIRECTORY_NAME = "migrations";
     private static final int COLUMN_INDEX = 1;
@@ -29,7 +30,7 @@ public class IntegrationEnvironmentTest extends IntegrationEnvironment {
         Path path = Paths.get("").toAbsolutePath().getParent().resolve(MIGRATIONS_DIRECTORY_NAME);
 
         try (Connection connection = DriverManager.getConnection(
-                getJdbcUrl(), getUsername(), getPassword())) {
+                IntegrationEnvironment.getJdbcUrl(), IntegrationEnvironment.getUsername(), IntegrationEnvironment.getPassword())) {
             Database database = new PostgresDatabase();
             database.setConnection(new JdbcConnection(connection));
             Liquibase liquibase = new Liquibase(
